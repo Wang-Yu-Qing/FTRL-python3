@@ -136,6 +136,8 @@ class FTRL_proximal:
         for i in I:
             g = (p-y) * 1  # xi is 1 for all i
             n = self.n[i]
+            # sigma is the adaptive learning rate, which vary from sample to
+            # sample and from weight to weight
             sigma = (sqrt(n+g**2)-sqrt(n))/self.alpha
             self.z[i] += (g - sigma*w[i])
             self.n[i] += g**2
