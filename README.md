@@ -12,6 +12,9 @@ https://www.kaggle.com/jiweiliu/ftrl-starter-code
 
 https://www.kaggle.com/c/avazu-ctr-prediction/forums/t/10927/beat-the-benchmark-with-less-than-1mb-of-memory
 
+### dataset
+Dataset used: https://www.kaggle.com/c/springleaf-marketing-response/data
+
 ### some pros of FTRL
 1. It is an online learning method, samples are fed in stream and the model is updated in real-time.
 2. The learning rate is adaptive per-coordinate, which means the learning rates of all weights are varying adaptively.
