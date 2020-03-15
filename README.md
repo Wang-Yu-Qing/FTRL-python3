@@ -16,7 +16,7 @@ https://www.kaggle.com/c/avazu-ctr-prediction/forums/t/10927/beat-the-benchmark-
 Dataset used: https://www.kaggle.com/c/springleaf-marketing-response/data
 
 ### some pros of FTRL
-1. It is an online learning method, samples are fed in stream and the model is updated in real-time.
+1. It is an online learning method, samples are fed in stream (the model learns each sample only once, which means there is only one endless training "epoch".) and the model is updated in real-time.
 2. The learning rate is adaptive per-coordinate, which means the learning rates of all weights are varying adaptively.
 3. Using the strong L1 and L2 regularization, the model is going to be sparse, saving lots of memory.
 4. A good balance between model performance (e.g. AUC) and model sparsity.
