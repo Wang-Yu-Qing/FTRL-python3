@@ -114,7 +114,8 @@ class FTRL_proximal:
         I = self.get_none_zero_entry_indices(inputs)
         # compute independent new w per sample
         # w = [None for _ in range(self.feature_vec_d)]
-        # use dict here is much better than list, since we only need to store i in I
+        # feature vec is very sparse, which means `I` contains few indices in full feature vec.
+        # use dict here is much better than list, since we only need to store i in `I`
         # a list with full length of self.feature_vec_d will waste tons of memory and time
         w = {}
         for i in I:
