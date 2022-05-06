@@ -68,7 +68,8 @@ class FTRL_proximal:
         for key, value in inputs.items():
             # use hash trick to provide unique value-feature_name pair to generate unique value for each feature value
             # one difference from standard one-hot is that indices for values of one category may not be continous,
-            # wich is totally fine for the model.
+            # which is totally fine for the model.
+            # when `featrue_vec_d` is too small, hash conflict will occur.
             one_hot_index = abs(hash(str(value) + "-" + key)) % self.feature_vec_d
             X.append(one_hot_index)
         return X
